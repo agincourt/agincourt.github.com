@@ -2,6 +2,7 @@
 **/.DS_Store
 **/*/.DS_Store
 static/*
+.sass-cache
 jekyll/.sass-cache
 jekyll/stylesheets/base.css
 .bundle
