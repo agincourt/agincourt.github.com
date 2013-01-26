@@ -1,0 +1,177 @@
+.grid_8, .grid_9
+  hr
+    background: #ddd
+
+ul.split
+  margin:     0 0 20px
+  padding:    0
+  list-style: none
+  +column-count(2)
+  +column-gap(20px)
+
+abbr, acronym
+  &.visible:after
+    content: ' (' attr(title) ')'
+code pre
+  border:  1px solid #ccc
+  padding: 10px
+
+p.intro
+  font-size: 17px
+
+.article blockquote
+  width:        300px
+  float:        right
+  margin-left:  20px
+  margin-right: -320px
+
+.clear.gap
+  width:      auto
+  height:     auto
+  min-height: 20px
+  visibility: visible
+  
+  hr
+    margin: 20px 0 40px
+
+.foot
+  font-style: italic
+  color:      #666
+
+.partners
+  font-size: 14px
+  
+.lightbox, .casestudy
+  display:  block
+  position: relative
+
+  &:hover:after
+    width:       24px
+    height:      24px
+    margin:      -15px 0 0 -12px
+    position:    absolute
+    overflow:    hidden
+    top:         50%
+    left:        50%
+    display:     block
+    content:     'View'
+    text-indent: -9999px
+    z-index:     3
+    text-indent: -9999px
+    
+.lightbox
+  &:hover:after
+    background:  transparent url(../images/layout/view.png) center no-repeat
+    
+.casestudy
+  &:hover:after
+    background:  transparent url(../images/layout/document.png) center no-repeat
+
+.box, form
+  padding:    19px
+  border:     1px solid #ddd
+  border-top-color:     #ccc
+  
+  background: #eee
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#eee))
+  background: -moz-linear-gradient(-90deg, #f7f7f7, #eee)
+  
+  +border-radius(5px)
+  +inset-box-shadow(#ddd, 0, 2px, 2px)
+  
+.box.grid_4
+  width: 260px
+
+.info p
+  position:  relative
+  margin:    0 0 5px
+  padding:   0 0 0 140px
+  font-size: 13px
+  label
+    width:       120px
+    position:    absolute
+    top:         0
+    left:        0
+    text-align:  right
+    font-size:   12px
+    font-weight: bold
+    color:       #666
+  
+    -webkit-font-smoothing: antialiased
+
+.related
+  padding-bottom: 20px
+
+  header
+    position: relative
+    
+    p
+      position:       absolute
+      top:            2px
+      right:          0
+      color:          #999
+      text-transform: uppercase
+      font-size:      11px
+      
+      a
+        color: inherit
+      a:hover
+        color: #20262b
+.related ul
+  margin-top:  -20px
+  margin-left: 0
+  border-top:  1px solid #eee
+  padding-top: 5px
+  list-style:  none
+.related li
+  margin-bottom: 5px
+
+ul.social
+  margin:     0
+  padding:    0
+  list-style: none
+  li
+    padding-top:    2px
+    padding-bottom: 2px
+    padding-left:   24px
+
+.cta
+  margin:        0 10px
+  padding:       40px 0
+  font-size:     20px
+  text-align:    center
+  
+  hr
+    margin-bottom: 40px
+  p
+    margin:     0 auto
+    padding:    1px 7px 0
+    display:    inline-block
+  p, .highlight
+    background:         #fff3d1
+    +box-shadow(#efdca6, 0, 1px, 0)
+  p.highlight
+    padding: 10px
+
+p.map
+  margin-top:  3px
+  margin-left: 20px
+  float:       right
+p.map span
+  padding:          4px
+  background-color: #eee
+  opacity:          0.5
+  +border-radius(3px)
+  
+  &:hover
+    background-color: #e7e7e7
+    opacity:          1
+
+.why-agincourt
+  clear: both
+  position: relative
+  h1
+    margin-bottom: 40px
+  h1 em
+    font-style:  normal
+    color:       #70afad

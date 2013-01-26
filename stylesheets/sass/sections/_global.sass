@@ -1,0 +1,135 @@
+.ie
+  body
+    padding-bottom: 0
+    background:     #fff url(../images/layout/carousel.png) top repeat-x
+
+body
+  padding:    3px 0
+  background: #fff
+  background-image: url(../images/layout/carousel.png), none, url(../images/layout/carousel.png)
+  background-position: top, top, bottom
+  background-repeat: repeat-x, no-repeat, repeat-x
+  color:      #20262b
+    
+body, input, textarea, button
+  font: 14px/1.5 'Proxima Nova', sans-serif
+input, textarea, button
+  line-height: 1.2
+h1, h2, h3, p, ul, ol, blockquote, hr, form, code pre
+  margin: 0 0 20px
+a
+  color: #e7440f
+  text-decoration: none
+  
+  &:focus
+    color: #538750
+
+// headings
+h1
+  font-size:   26px
+  line-height: 1.2
+  -webkit-font-smoothing: antialiased
+
+h2
+  font-size:   20px
+  font-weight: normal
+h3
+  font-size: 14px
+h1, h2, h3
+  img, span
+    margin-right: 10px
+    vertical-align: middle
+h1, h2
+  img, span
+    margin-top: -9px
+  a
+    color: #20262b
+    
+    &:hover
+      color: #e7440f
+
+// body text
+p em
+  background: #fff3d1
+  font-style: normal
+
+// lists
+ul, ol
+  margin-left: 20px
+ul
+  list-style: circle
+ol
+  list-style: decimal
+
+// imagery
+.figure
+  margin-bottom: 20px
+  color: #74787b
+  
+  &.right
+    float: right
+    margin-left: 20px
+  
+  .figcaption
+    font-size: 12px
+  
+  img
+    margin:     0 0 5px
+    background: #fff
+    +box-shadow(rgba(0,0,0,0.2), 0, 2px, 4px)
+    &.insitu
+      +no-box-shadow
+  
+// quotes
+cite
+  font-style: inherit
+blockquote
+  p
+    font-style: italic
+    color:      #74787b
+
+  cite
+    display:     block
+    float:       right
+    padding:     0 0 0 42px
+    font-weight: bold
+    position:    relative
+
+    &:before
+      width:      46px
+      height:     33px
+      display:    block
+      position:   absolute
+      top:        -22px
+      left:       -43px
+      content:    ' '
+      background: transparent url(../images/layout/blockquote-bubble.png) 0 0 no-repeat
+
+    span
+      display:     block
+      font-weight: normal
+      font-size:   12px
+      color:       #74787b
+      line-height: 1.2
+
+// rules
+hr
+  height:     1px
+  width:      940px
+  margin:     0 auto 20px
+  padding:    0
+  border:     0
+  position:   relative
+  clear:      both
+  background: #ddd
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#fff), to(#fff), color-stop(0.3, #ddd), color-stop(0.7, #ddd))
+  background: -moz-linear-gradient(top left, #fff, #ddd 30%, #ddd 70%, #fff)
+
+.grid_8 hr
+  width: 620px
+.grid_4 hr
+  width: 300px
+  
+#wrap
+  background: #fff
+  +double-box-shadow(rgba(0,0,0,0.2), 0, 1px, 0, rgba(0,0,0,0.2), 0, -1px, 0)

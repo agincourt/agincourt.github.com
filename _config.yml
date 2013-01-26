@@ -1,5 +1,4 @@
 safe:         true
-source:       ./jekyll
 destination:  ./static
 permalink:    pretty
 lsi:          false

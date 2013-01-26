@@ -1,0 +1,139 @@
+form
+  width:      auto
+  background: #eee
+  clear:      both
+
+  legend
+    font-size:    16px
+    padding-left: 130px
+    text-shadow:  #fff 0 1px 0
+
+  fieldset + fieldset
+    margin-top: 20px
+
+  // status
+  &.complete, &.failed, .sending
+    img
+      margin: 0 auto
+      display: block
+    h2
+      clear:      both
+      text-align: center
+
+  &.sending
+    .row, .finish, fieldset
+      display: none
+    .sending
+      display: block
+  .sending
+    display: none
+
+
+  // rows
+  .row
+    padding:  5px 140px 5px 130px
+    position: relative
+    clear:    both
+
+    &.focused
+      background: #fff3d1
+      background: -webkit-gradient(linear, left top, right top, from(rgba(255, 243, 209, 0)), to(rgba(255, 243, 209, 0)), color-stop(0.1, rgba(255, 243, 209, 1)), color-stop(0.9, rgba(255, 243, 209, 1)))
+      background: -moz-linear-gradient(rgba(255, 243, 209, 0), 10% rgba(255, 243, 209, 1), 90% rgba(255, 243, 209, 1), rgba(255, 243, 209, 0))
+
+    label
+      width:       110px
+      position:    absolute
+      top:         9px
+      left:        0
+      font-weight: bold
+      text-align:  right
+
+      &.checkbox, &.radio
+        width:       auto !important
+        margin:      5px 10px 5px 0
+        position:    static
+        display:     block
+        text-align:  left
+        font-weight: normal
+        cursor:      pointer
+        &.focused
+          font-weight: bold
+
+    span
+      margin-top: 4px
+      font-size:  12px
+      float:      right
+      color:      #74787b
+
+  // input fields
+  input.text, textarea
+    width:   240px
+    margin:  0 10px 0 0
+    padding: 4px
+    border:  1px solid #ccc
+    border-top-color:  #aaa
+  textarea
+    width:   310px
+    margin:  0
+    display: block
+    resize:  vertical
+  input, textarea, select
+    &.error
+      background:       #ffe8e8
+      border-color:     #eeb9b9
+      border-top-color: #d89898
+  input.other
+    margin-top: 5px
+
+  // finishing up
+  .finish
+    height: 26px
+    margin: 5px 130px 0
+
+  button
+    float:      right
+    margin:     0
+    border:     1px solid #ccc
+    border-bottom-color:  #aaa
+    padding:    5px 8px 3px
+    background: #fff
+    cursor:     pointer
+    +border-radius(3px)
+
+    &:hover
+      color: #e7440f
+    &:active
+      border-top-color:    #aaa
+      border-bottom-color: #ccc
+      +inset-box-shadow(#ddd, 0, 3px, 3px)
+
+// large forms
+.grid_12 form
+  legend
+    padding-left: 200px
+
+  .row
+    padding-left:  200px
+    padding-right: 210px
+    label
+      width: 180px
+
+  input.text, textarea
+    width: 410px
+
+  .finish
+    margin-left:  200px
+    margin-right: 200px
+
+// newsletter
+form.newsletter
+  position: relative
+
+  label
+    font-size: 11px
+    display:   block
+  input
+    width: 150px
+  button
+    float: right
+    clear: right

@@ -1,0 +1,70 @@
+---
+permalink: /articles/how-agincourt-maximise-uptime
+layout: article
+category: articles
+title: "How Agincourt maximise uptime - Agincourt"
+---
+
+<div class="grid_8 article"> 
+  <h1>How Agincourt maximise uptime</h1>
+  
+  <p class="intro">A website or web application isn&#8217;t going to become successful if it&#8217;s unavailable half the time. Every minute of downtime can mean frustrated users, inconvenience and lost business. It&#8217;s very important that sites and applications are built with best practices in mind from the start as bolting on high availability techniques can be costly.</p>
+  
+  <h2>What causes downtime?</h2>
+  
+  <p>In most cases downtime occurs due to problems at the data centre &#8211; it could be the internet connection, power supply, cooling, internal network or your server could crash. Obviously, web hosts do as much as possible to prevent any of these issues halting your service, where possible redundancy is used to offer a backup should something fail, but even then problems can still occur.</p> 
+  
+  <p>Another cause of downtime is malicious attacks, such as <abbr title="Distributed Denial of Service" class="visible">DDoS</abbr> attacks whereby thousands of computers worldwide all send requests to your server and either it grinds itself to a halt, or the network can&#8217;t handle the flow.</p> 
+  
+  <p>Application bugs and natural fluctuations in user activity can also take servers offline if the architecture of the server(s) and the code behind the site/application simply aren&#8217;t properly setup.</p>
+  
+  <h2>How to prevent it</h2>
+  
+  <h3>Redundancy</h3>
+  
+  <p>Reducing the likelihood of problems occurring on single pieces of hardware gets increasingly expensive as you get closer to 100% reliability &#8211; it&#8217;s usually more cost-effective to double-up commodity hardware.</p>
+  
+  <blockquote cite="http://www.bbc.co.uk/news/business-12406171"> 
+    <p>&ldquo;When we started [Friendfeed], we were faced with deciding whether to purchase our own servers, or use one of the many cloud hosting providers out there like Amazon Web Services.</p> 
+    <p>At the time we chose to purchase our own servers. I think that was a big mistake in retrospect. [&#8230;] it meant we had to maintain them ourselves, and there were times where I&#8217;d have to wake up in the middle of the night and drive down to a data centre to fix a problem.&rdquo;</p> 
+    <cite>Bret Taylor <span>Facebook <abbr title="Chief Technology Officer"><span class="caps">CTO</span></abbr></span></cite>
+  </blockquote>
+  
+  <p>Unfortunately, 99% of the time building redundancy isn&#8217;t as simple as buying another server &#8211; you&#8217;ve got to handle replication between them &#8211; and when you have users updating data all the time this can get tricky because you may have to deal with conflicts and other synchronisation issues. So what&#8217;s the solution? Well thankfully the cloud is here to save us &#8211; by shifting any data off the web servers an onto a cloud of servers, you don&#8217;t have to worry about any synchronisation!</p>
+  
+  <p>If your web servers are bare and contain nothing but the actual application code, there is no need to back them up because they don&#8217;t hold any important information so you&#8217;ll save some cash there. For maximum reduction in costs, you can stick to just one webserver as downtime can be minimised by simply redeploying on another should it fail, alternatively two small virtual servers can be deployed with load balancing between them so the application will continue to stay online should one fail.</p>
+  
+  <h3>Security</h3>
+  
+  <p>Aside from using a host which has a secure, protected setup, any attacks are going to be the responsibility of yourself or a technician to fix, so ensuring said person locates the problem as quickly as possible is key.</p>
+  
+  <p>Incoming requests on a server should be logged and monitored for spikes and response time. By using services like <a href="http://www.serverdensity.com/">Server Density</a> and/or <a href="http://newrelic.com/">NewRelic</a>, you can mitigate problems and attacks when they are ramping up &#8211; rather than only discovering once they&#8217;ve crippled your whole setup.</p>
+  
+  <p>Using a service which has <span class="caps">SMS</span> and email notifications will also help you sleep at night as there is no worry that your server is down.</p>
+  
+  <h2>How to mask it</h2>
+  
+  <p>Should part of your system fail, all is not lost &#8211; by employing a degradable system, you can continue to serve users, at least in some way.</p>
+  
+  <p>First of all, you should have a maintenance-mode for your app, so should a major bug occur, you can flip the switch and prevent any further damage by serving a static notice page to users. Obviously, this will be clear to users that you&#8217;re having problems, so there will be detriment to their experience, but it could be much worse should the site have other problems.</p>
+  
+  <p>Funnily enough, there is caching sat directly in everyone&#8217;s browsers, as part of the <span class="caps">HTTP</span> protocol, so make use of it! Most people have become ignorant to it&#8217;s benefits due to the increase in Internet connectivity speed, but it&#8217;s not purely for speed &#8211; it&#8217;s for redundancy too. By sending the right headers along with your <span class="caps">HTML</span>, browsers will store pages temporarily &#8211; should the live page become inaccessible, the cached copy will be displayed.</p>
+  
+  <p>You can take browsing caching one step further by implementing a caching server, like <a href="http://www.varnish-cache.org/">Varnish</a>. This sits as an intermediary between your web servers and the user&#8217;s browser storing pages when the headers tell it to. Should your web server(s) fail, the cached page can be served to users. This has the added advantage that even dynamic pages can be cached and the sections that change can default back to a static option.</p>
+  
+  <h2>Summary</h2>
+  
+  <p>Here are our basic tips for maximising uptime, where appropriate:</p>
+  
+  <ul> 
+    <li>use pay-as-you-go redundant cloud setups to outsource the complexity and expense of redundant setups.</li> 
+    <li>multiple commodity servers will usually be more stable than one top-of-the-range server.</li> 
+    <li>keep your web servers bare &#8211; just store the application locally, nothing more.</li> 
+    <li>build a maintenance-mode flip-switch to revert to a static page should a major problem occur.</li> 
+    <li>take advantage of caching (<span class="caps">HTTP</span> &amp; Varnish).</li> 
+    <li>monitor your server with a service like <a href="http://www.serverdensity.com/">Server Density</a> and log requests to provide peace of mind and mitigate attacks early on.</li> 
+  </ul>
+  
+  <p>Of course these solutions don&#8217;t suit all applications or budgets, so we always tailor our setups to individual client requirements.</p>
+  
+</div> 

@@ -1,0 +1,21 @@
+/* TEAM */
+  Lead Designer/Developer: Ryan Townsend
+  Contact: ryan [at] agincourt.co
+  Twitter: @ryantownsend
+  Github:  http://github.com/ryantownsend
+  From:    Newark, UK
+
+  Designer/Developer: Ben Hayman
+  Contact: ben [at] agincourt.co
+  Twitter: @benhymn
+  Github:  http://github.com/bnhymn
+  From:    Grantham, UK
+
+  Copy review: Lucy Naylor
+  Twitter:     @lmnaylor
+  From:        Hough on the Hill, UK
+
+/* SITE */
+  Language:English
+  Doctype:HTML5 with CSS3
+  IDE:Textmate
