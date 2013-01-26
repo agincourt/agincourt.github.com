@@ -1,7 +1,6 @@
-permalink:    pretty
-auto:         true
 safe:         true
 source:       ./jekyll
 destination:  ./static
+permalink:    pretty
 lsi:          false
 pygments:     true
