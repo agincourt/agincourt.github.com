@@ -1,0 +1,121 @@
+.featurette
+  margin-bottom: 20px
+  position:      relative
+  height:        300px
+  border-bottom: 1px solid #ddd
+
+  &:before
+    height:     10px
+    content:    ' '
+    display:    block
+    position:   absolute
+    bottom:     0
+    left:       0
+    right:      0
+    z-index:    3
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.05)))
+    background: -moz-linear-gradient(-90deg, rgba(0,0,0,0), rgba(0,0,0,0.05))
+
+  .label
+    margin:      0 0 0 -90px
+    padding:     10px 5px
+    width:       180px
+    display:     block
+    position:    absolute
+    bottom:      5px
+    left:        50%
+    z-index:     5
+    background:  #fff
+    color:       #666
+    text-align:  center
+    opacity:     0
+    cursor:      pointer
+    line-height: 1
+
+    +border-radius(5px)
+    +double-transition(opacity, 0.5s, ease, bottom, 0.5s, linear)
+    +box-shadow(rgba(0,0,0,0.3), 0, 1px, 2px)
+
+  a
+    height:     300px
+    position:   absolute
+    top:        0
+    left:       0
+    right:      0
+    cursor:     pointer
+    background: none
+    overflow:   hidden
+
+  img
+    position: absolute
+    +box-shadow(rgba(0,0,0,0.2), 0, 2px, 4px)
+
+  .front
+    z-index:     4
+    margin-left: -310px
+    top:         0
+    left:        50%
+
+    +animation(featuretteFront, 2s, 0s)
+    +box-shadow(rgba(0,0,0,0.3), 0, 10px, 15px)
+
+  .left, .right
+    top:     60px
+    z-index: 2
+    +animation(featuretteEdge, 2s, 0s)
+
+  .left-forward, .right-forward
+    top:     30px
+    z-index: 3
+    +animation(featuretteMiddle, 2s, 0s)
+
+  .left
+    left: 10px
+  .right
+    right: 10px
+  .left-forward
+    left: 165px
+  .right-forward
+    right: 165px
+
+  &.animated
+    .front
+      +transform-transition(1s, ease)
+      +transform-origin(center, 25%)
+      +animation(featuretteFrontAnimated, 2s, 0s)
+    .left
+      left: 50px
+      +transition(left, 1s, ease)
+      +animation(featuretteLeftAnimated, 2s, 0s)
+    .left-forward
+      left: 190px
+      +transition(left, 1s, ease)
+    .right
+      right: 50px
+      +transition(right, 1s, ease)
+      +animation(featuretteRightAnimated, 2s, 0s)
+    .right-forward
+      right: 190px
+      +transition(right, 1s, ease)
+    &:hover
+      .left
+        left: 10px
+      .right
+        right: 10px
+      .left-forward
+        left: 165px
+      .right-forward
+        right: 165px
+
+  &:hover
+    .label
+      bottom:  10px
+      opacity: 1
+
+.featurette.small
+  &, a
+    height: 150px
+  .front
+    margin-left: -150px
+  .label
+    bottom: 10px

@@ -1,0 +1,55 @@
+.side_feature
+  position: relative
+
+  &:before
+    width:    10px
+    content:  ' '
+    display:  block
+    position: absolute
+    bottom:   0
+    top:      0
+    right:    0
+    z-index:  4
+
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.15)))
+    background: -moz-linear-gradient(0, rgba(0,0,0,0), rgba(0,0,0,0.15))
+  &:after
+    height:   100px
+    width:    10px
+    content:  ' '
+    display:  block
+    position: absolute
+    bottom:   0
+    right:    0
+    z-index:  4
+
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255,255,255,0)), to(rgb(255,255,255)))
+    background: -moz-linear-gradient(-90deg, rgba(255,255,255,0), rgb(255,255,255))
+
+  h2, p
+    margin-right: 20px
+
+  .figure
+    display:       block
+    height:        470px
+    width:         300px
+    border-bottom: 1px solid #ddd
+    overflow:      hidden
+    position:      relative
+
+    &:before
+      height:   10px
+      content:  ' '
+      display:  block
+      position: absolute
+      bottom:   0
+      left:     0
+      right:    0
+      z-index:  3
+
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.05)))
+      background: -moz-linear-gradient(-90deg, rgba(0,0,0,0), rgba(0,0,0,0.05))
+
+    img
+      margin-left: 20px
+      +animation(sideFeature, 1s, 0s)

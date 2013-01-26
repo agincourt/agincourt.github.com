@@ -1,0 +1,157 @@
+=reset
+  margin:  0
+  padding: 0
+  border:  0
+
+=clearfix
+  display: inline-block
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+  * html &
+    height: 1px
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+=border-bottom-radius($radius)
+  -webkit-border-bottom-left-radius: $radius
+  -webkit-border-bottom-right-radius: $radius
+  -moz-border-radius-bottomleft: $radius
+  -moz-border-radius-bottomright: $radius
+  border-bottom-left-radius: $radius
+  border-bottom-right-radius: $radius
+
+=border-top-radius($radius)
+  -webkit-border-top-left-radius: $radius
+  -webkit-border-top-right-radius: $radius
+  -moz-border-radius-topleft: $radius
+  -moz-border-radius-topright: $radius
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
+
+=border-right-radius($radius)
+  -webkit-border-top-right-radius: $radius
+  -webkit-border-bottom-right-radius: $radius
+  -moz-border-radius-topright: $radius
+  -moz-border-radius-bottomright: $radius
+  border-top-right-radius: $radius
+  border-bottom-right-radius: $radius
+
+=border-left-radius($radius)
+  -webkit-border-top-left-radius: $radius
+  -webkit-border-bottom-left-radius: $radius
+  -moz-border-radius-topleft: $radius
+  -moz-border-radius-bottomleft: $radius
+  border-top-left-radius: $radius
+  border-bottom-left-radius: $radius
+
+=border-top-left-radius($radius)
+  -webkit-border-top-left-radius: $radius
+  -moz-border-radius-topleft: $radius
+  border-top-left-radius: $radius
+
+=border-top-right-radius($radius)
+  -webkit-border-top-right-radius: $radius
+  -moz-border-radius-topright: $radius
+  border-top-right-radius: $radius
+
+=border-bottom-left-radius($radius)
+  -webkit-border-bottom-left-radius: $radius
+  -moz-border-radius-bottomleft: $radius
+  border-bottom-left-radius: $radius
+
+=border-bottom-right-radius($radius)
+  -webkit-border-bottom-right-radius: $radius
+  -moz-border-radius-bottomright: $radius
+  border-bottom-right-radius: $radius
+
+=box-shadow($color, $offset_x, $offset_y, $blur_radius)
+  -webkit-box-shadow: unquote("#{$color} #{$offset_x} #{$offset_y} #{$blur_radius}")
+  -moz-box-shadow:    unquote("#{$color} #{$offset_x} #{$offset_y} #{$blur_radius}")
+  box-shadow:         unquote("#{$color} #{$offset_x} #{$offset_y} #{$blur_radius}")
+
+=no-box-shadow
+  -webkit-box-shadow: none
+  -moz-box-shadow:    none
+  box-shadow:         none
+
+=inset-box-shadow($color, $offset_x, $offset_y, $blur_radius)
+  -webkit-box-shadow: unquote("#{$color} #{$offset_x} #{$offset_y} #{$blur_radius} inset")
+  -moz-box-shadow:    unquote("#{$color} #{$offset_x} #{$offset_y} #{$blur_radius} inset")
+  box-shadow:         unquote("#{$color} #{$offset_x} #{$offset_y} #{$blur_radius} inset")
+
+=double-box-shadow($color, $offset_x, $offset_y, $blur_radius, $color_2, $offset_x_2, $offset_y_2, $blur_radius_2)
+  -webkit-box-shadow: unquote("#{$color} #{$offset_x} #{$offset_y} #{$blur_radius}, #{$color_2} #{$offset_x_2} #{$offset_y_2} #{$blur_radius_2}")
+  -moz-box-shadow:    unquote("#{$color} #{$offset_x} #{$offset_y} #{$blur_radius}, #{$color_2} #{$offset_x_2} #{$offset_y_2} #{$blur_radius_2}")
+  box-shadow:         unquote("#{$color} #{$offset_x} #{$offset_y} #{$blur_radius}, #{$color_2} #{$offset_x_2} #{$offset_y_2} #{$blur_radius_2}")
+
+=position-absolute($top, $left, $bottom, $right)
+  position: absolute
+  top:      $top
+  left:     $left
+  right:    $right
+  bottom:   $bottom
+
+=transition($property, $duration, $timing_function)
+  -webkit-transition: unquote("#{$property} #{$duration} #{$timing_function}")
+  -moz-transition:    unquote("#{$property} #{$duration} #{$timing_function}")
+  -o-transition:      unquote("#{$property} #{$duration} #{$timing_function}")
+  transition:         unquote("#{$property} #{$duration} #{$timing_function}")
+
+=double-transition($property, $duration, $timing_function, $property_2, $duration_2, $timing_function_2)
+  -webkit-transition: unquote("#{$property} #{$duration} #{$timing_function}, #{$property_2} #{$duration_2} #{$timing_function_2}")
+  -moz-transition:    unquote("#{$property} #{$duration} #{$timing_function}, #{$property_2} #{$duration_2} #{$timing_function_2}")
+  -o-transition:      unquote("#{$property} #{$duration} #{$timing_function}, #{$property_2} #{$duration_2} #{$timing_function_2}")
+  transition:         unquote("#{$property} #{$duration} #{$timing_function}, #{$property_2} #{$duration_2} #{$timing_function_2}")
+
+=transform-transition($duration, $timing_function)
+  -webkit-transition: unquote("-webkit-transform #{$duration} #{$timing_function}")
+  -moz-transition:    unquote("-moz-transform #{$duration} #{$timing_function}")
+  -o-transition:      unquote("-o-transform #{$duration} #{$timing_function}")
+  transition:         unquote("transform #{$duration} #{$timing_function}")
+
+=transition-delay($delay)
+  -webkit-transition-delay: $delay
+  -moz-transition-delay:    $delay
+  -o-transition-delay:      $delay
+  transition-delay:         $delay
+
+=transform-origin($value_1, $value_2)
+  -webkit-transform-origin: unquote("#{$value_1} #{$value_2}")
+  -moz-transform-origin:    unquote("#{$value_1} #{$value_2}")
+  -o-transform-origin:      unquote("#{$value_1} #{$value_2}")
+  transform-origin:         unquote("#{$value_1} #{$value_2}")
+
+=animation($name, $duration, $delay)
+  -webkit-animation: unquote("#{$name} #{$duration} #{$delay}")
+  -moz-animation:    unquote("#{$name} #{$duration} #{$delay}")
+  animation:         unquote("#{$name} #{$duration} #{$delay}")
+
+=transform($value)
+  -webkit-transform: $value
+  -moz-transform:    $value
+  -o-transform:      $value
+  transform:         $value
+
+=column-count($number)
+  -webkit-column-count: $number
+  -moz-column-count:    $number
+  column-count:         $number
+
+=column-gap($px)
+  -webkit-column-gap: $px
+  -moz-column-gap:    $px
+  column-gap:         $px
+
+=font-smooth
+  -webkit-font-smoothing: antialiased
+
+=background-gradient($from, $to)
+  background: unquote("-webkit-gradient(linear, 0 0, 0 100%, from(#{$from}), to(#{$to}))")
+  background: unquote("-moz-linear-gradient(-90deg, #{$from}, #{$to})")

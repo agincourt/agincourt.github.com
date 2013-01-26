@@ -1,0 +1,5 @@
+source:       ./jekyll
+destination:  ./static
+permalink:    /:categories/:title
+auto:         true
+server:       true

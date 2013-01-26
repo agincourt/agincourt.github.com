@@ -1,0 +1,37 @@
+---
+layout: article
+category: articles
+title: "Technique Review: Responsive Design - Agincourt"
+---
+
+<div class="grid_10 prefix_1 suffix_1">
+  <h1>Technique Review: Responsive Design</h1>
+  
+  <p class="intro">You might have come across the phrase 'responsive web design' recently, as with a lot of things, it's a buzzword (or phrase) which gets a lot of people excited, but what does it mean and why is it important? Well, it has a great deal to do with these things below:</p>
+  
+  <p><img src="http://cdn.agincourt.co/images/content/mobile-devices-ipad-iphone-htc.jpg" width="780" height="200" alt="Mobile Devices: iPad, iPhone, HTC" /></p>
+  
+  <p>That's right - mobile devices strike again! It's getting harder and harder to avoid catering to mobile devices, to put things in perspective - mobile browsing is increasing so rapidly analysts are predicting that during 2013 mobile internet users will surpass desktop users! It's highly unlikely that anyone can ignore this statistic.</p>
+  
+  <p>So how are you going to cater to mobile users? Well there are two solutions, either build a whole site tailored specifically to their needs, which can be very costly both in setup and maintenance (as you're going to be doubling up all the updates) or follow a responsive design pattern; i.e. have web pages alter themselves based upon the resolution of the browser.</p>
+  
+  <p>Mobile phones typically have smaller screens than desktop computers, and even the retina display in the iPhone 4 with it's massive 640x960px resolution causes problems with standard website viewing because the pixel density is so high. Using a particular CSS technique called 'media queries' we can target browsers based on these factors:</p>
+  
+  <code><pre><span style="color:#666">/* Target mobile devices with a high pixel density (just the iPhone 4) */</span>
+@media only <span style="color:#060">screen</span> and (<span style="color:#36c">-webkit-min-device-pixel-ratio</span>: <span style="color:#060">2</span>) {
+  <span style="color:#c00">body</span> { <span style="color:#36c">background</span>: <span style="color:#060">red</span> }
+}
+
+<span style="color:#666">/* Target mobile devices with screens between 768 and 1024px wide (iPads basically) */</span>
+@media only <span style="color:#060">screen</span> and (<span style="color:#36c">min-device-width</span>: <span style="color:#060">768px</span>) and (<span style="color:#36c">max-device-width</span>: <span style="color:#060">1024px</span>) {
+  <span style="color:#c00">body</span> { <span style="color:#36c">background</span>: <span style="color:#060">green</span> }
+}</pre></code>
+
+  <p>The above might look rather technical, but I'm sure you can grasp that for iPhone's it'll change the background colour of the website to red and for iPads it'll turn green. But the background isn't all we can change - pretty much any element on the page can be resized or coloured differently, fonts can be changed and much more - this allows the user interface to work much more fluidly - users will be able to read text more easily, press buttons without worrying about accidently clicking the wrong one etc.</p>
+  
+  <p>Also, by making these changes in the CSS files, it means you don't need to have two copies of your website - so there is no need to worry about keeping two sites in sync or whether there will be duplicate content issues with search engines etc.</p>
+  
+  <hr />
+  
+  <p>If you'd like to optimise your website for mobile devices, feel free to <a href="/contact">drop us a line</a>. For more technical information on responsive web design, <a href="http://www.alistapart.com/articles/responsive-web-design/">visit A List Apart</a>.</p>
+</div>

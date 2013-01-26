@@ -1,0 +1,64 @@
+<!doctype html>  
+
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+ 
+<head> 
+  <meta charset="utf-8" /> 
+  <title>{{ page.title }}</title> 
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/base.css" />
+  
+  <!-- Typekit -->
+  <script src="http://use.typekit.com/jjv1xjo.js"></script>
+  <script>if(navigator.userAgent.toLowerCase().indexOf("windows nt 5") < 0){try{Typekit.load();}catch(e){}}</script>
+  
+  <!-- Meta -->
+  <link rel="author" type="text/plain" href="/humans.txt" />
+  <link rel="alternate" type="application/rss+xml" title="Agincourt Web Development Articles" href="/feed.rss" />
+</head>
+
+<body>
+  
+  <div id="header" class="container_12">
+    <h1><a href="/">Agincourt</a></h1>
+    <ul id="nav">
+      
+      <li{% if page.url contains "/index" %} class="current"{% endif %}><a href="/">Home <span>Introducing Agincourt.</span></a></li>
+      <li{% if page.url contains "/services" %} class="current"{% endif %}><a href="/services">Services <span>What we have to offer.</span></a></li>
+      <li{% if page.url contains "/portfolio" %} class="current"{% endif %}><a href="/portfolio">Portfolio <span>Things we've made.</span></a></li>
+      <li{% if page.url contains "/about" %} class="current"{% endif %}><a href="/about">About <span>Who we are.</span></a></li>
+      <li{% if page.url contains "/contact" %} class="current"{% endif %}><a href="/contact">Contact <span>Get in touch.</span></a></li>
+    </ul>
+  </div><!-- #header -->
+
+  <hr />
+  
+  {{ content }}
+  
+  <div class="clear"></div>
+  
+  <div id="pusher"></div>
+  
+  <div id="footer">
+    <p>&copy; 2011 Agincourt Design Ltd</p>
+    <p class="right">
+      <label class="email"><a href="mailto:info@agincourt.co">info@agincourt.co</a></label>
+      <label class="phone">0845 481 1010</label></p>
+    <div class="clear"></div>
+  </div><!-- #footer -->
+  
+  <!-- Load jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="javascripts/jquery-1.5.2.min.js"%3E%3C/script%3E'))</script>
+  
+  <!-- Load custom JS -->
+  <script src="/javascripts/application.js"></script>
+  
+  <!-- Asynchronous Google Analytics -->
+  <script>var _gaq = [['_setAccount', 'UA-883686-25'], ['_trackPageview']]; (function(d, t) { var g = d.createElement(t), s = d.getElementsByTagName(t)[0]; g.async = true; g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; s.parentNode.insertBefore(g, s); })(document, 'script');</script>
+</body>
+</html>

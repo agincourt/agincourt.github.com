@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /contact-failed.html
+Disallow: /contact-sent.html
+Disallow: /request-for-proposal-failed.html
+Disallow: /request-for-proposal-sent.html
+Disallow: /404.html
+Disallow: /newsletter-unsubscribed.html
+Disallow: /newsletter-subscribed.html
+Disallow: /contact-failed
+Disallow: /contact-sent
+Disallow: /request-for-proposal-failed
+Disallow: /request-for-proposal-sent
+Disallow: /404
+Disallow: /newsletter-unsubscribed
+Disallow: /newsletter-subscribed

@@ -1,0 +1,81 @@
+---
+layout: default
+title: "Bidding Farmer Case Study - Agincourt"
+---
+
+<div id="content">
+  <div class="container_12">      
+    <div class="figure grid_8">
+      <img src="http://cdn.agincourt.co/images/content/bidding-farmer-feature.jpg" width="620" height="470" alt="Screenshot of BiddingFarmer's homepage" />
+      <div class="figcaption">Figure 1. Bidding Farmer homepage - complete with lightboxed HTML5 video player.</div>
+    </div><!-- .grid_8 -->
+  
+    <div class="grid_4">
+      <h1>Project: BiddingFarmer</h1>
+      <p><a href="http://www.biddingfarmer.com/">www.biddingfarmer.com</a></p>
+      <p class="intro">BiddingFarmer is a niche auction website, aimed at the farming community. Agincourt were contracted because of our expertise in developing large scale web applications and simplicity in the user experience was an important requirement.</p>
+    
+      <blockquote>
+        <p>&ldquo;Agincourt were very helpful, holding our hand and guiding us through the various situations, giving good advice so that we ended up with a great looking site. The professional service we have received has made this new endeavour far easier than I could have expected.&rdquo;</p>
+        <cite>Hugo Marfleet <span>Managing Director</span></cite>
+      </blockquote>
+    </div><!-- .grid_4.intro -->
+  
+    <div class="clear gap"></div>
+
+    <div class="figure grid_3">
+      <a href="http://cdn.agincourt.co/images/content/bidding-farmer-full-1.jpg" class="lightbox"><img src="http://cdn.agincourt.co/images/content/bidding-farmer-thumbnail-1.jpg" width="220" height="150" alt="" /></a>
+      <div class="figcaption">Fig 2. Active countdown.</div>
+    </div><!-- .grid_3 -->
+  
+    <div class="figure grid_3">
+      <a href="http://cdn.agincourt.co/images/content/bidding-farmer-full-2.jpg" class="lightbox"><img src="http://cdn.agincourt.co/images/content/bidding-farmer-thumbnail-2.jpg" width="220" height="150" alt="" /></a>
+      <div class="figcaption">Fig 3. Different listing types.</div>
+    </div><!-- .grid_3 -->
+  
+    <div class="figure grid_3">
+      <a href="http://cdn.agincourt.co/images/content/bidding-farmer-full-3.jpg" class="lightbox"><img src="http://cdn.agincourt.co/images/content/bidding-farmer-thumbnail-3.jpg" width="220" height="150" alt="" /></a>
+      <div class="figcaption">Fig 4. Automated image resizing.</div>
+    </div><!-- .grid_3 -->
+
+    <div class="figure grid_3">
+      <a href="http://cdn.agincourt.co/images/content/bidding-farmer-full-4.jpg" class="lightbox"><img src="http://cdn.agincourt.co/images/content/bidding-farmer-thumbnail-4.jpg" width="220" height="150" alt="" /></a>
+      <div class="figcaption">Fig 5. Bespoke statistics.</div>
+    </div><!-- .grid_3 -->
+
+    <div class="clear gap"></div>
+  
+    <div class="grid_8">
+      <p>The system allows for different types of listings - auctions, classifieds and free listings (provided the item is not charged for) [see fig. 3]. As part of their first listing (or at any point), users can register for their own account, where all their listings, questions, feedback etc are contained.</p>
+
+      <p>We chose an ACID-compliant, transactional database engine (InnoDB / MySQL) to be implemented due to the consistency requirements with bidding often taking place rapidly towards the end of an auction. Background jobs and Cron Jobs handle various processing such as the completion of auctions and notification of the winning bidders.</p>
+
+      <p>Paypal handles the payments between users, with automated callbacks to the application to log received payments. Users also have the option to accept other methods of payment (cash, cheque etc), although they are not handled by the service and are the responsibility of the users themselves.</p>
+    </div><!-- .grid_8 -->
+  
+    <div class="grid_4 box">
+      <h2><span class="sprite key-technologies"></span>Key Technologies</h2>
+    
+      <div class="info">
+        <p><label>Operating system</label> Ubuntu Server</p>
+        <p><label>Web server</label> NGINX</p>
+        <p><label>Database</label> MySQL with InnoDB</p>
+        <p><label>Caching</label> Memcached</p>
+        <p><label>Payment Processing</label> Paypal</p>
+        <p><label>Framework</label> Ruby on Rails</p>
+        <p><label>Performance Analysis</label> New Relic</p>
+        <p><label>Health Monitoring</label> Pingdom</p>
+      </div>
+    </div>
+  
+    <div class="clear gap"></div>
+  
+    <div class="grid_12 cta">
+       <hr />
+       <p>Got an idea for a kick-ass web app? <a href="/contact">Contact us</a> to get the ball rolling!</p>
+     </div>
+
+  </div><!-- .container_12 -->
+
+  <div class="clear"></div>
+</div><!-- #content -->

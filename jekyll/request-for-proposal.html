@@ -1,0 +1,170 @@
+---
+layout: default
+title: "Request for proposal - Agincourt"
+---
+
+<div id="content">
+  <div class="container_12">
+    <div class="grid_12">
+      <h1>Request for proposal</h1>
+
+      <div class="grid_8 alpha">
+        <p>To help us produce an accurate proposal and quote for you, please complete as much as the following form as possible. The more informed we are, the better.</p>
+      </div>
+
+      <div class="grid_4 omega">
+        <p><strong>Prefer to speak to someone?</strong><br />Feel free to give us a call on <em>0845 481 10 10</em>.</p>
+      </div>
+
+      <form action="/submit" method="post" id="proposal_form" data-remote="true">
+        <fieldset>
+          <legend>About you</legend>
+          <div class="row">
+            <label for="request_name">Your Name:</label>
+            <span>required</span>
+            <input name="request[name]" id="request_name" class="text" type="text" required="required" autofocus="autofocus" />
+          </div>
+          <div class="row">
+            <label for="request_email">Your Email:</label>
+            <span>required</span>
+            <input name="request[email]" id="request_email" class="text" type="email" required="required" />
+          </div>
+          <div class="row">
+            <label for="request_phone">Your Phone number:</label>
+            <span>optional</span>
+            <input name="request[phone]" id="request_phone" class="text" type="tel" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About your business</legend>
+
+          <div class="row">
+            <label for="request_company">Company Name:</label>
+            <span>optional</span>
+            <input name="request[company]" id="request_company" class="text" type="text" />
+          </div>
+
+          <div class="row">
+            <label for="request_products_or_services">Products/Services:</label>
+            <span>optional</span>
+            <textarea name="request[products_or_services]" id="request_products_or_services" class="text" rows="7" cols="50"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About your project</legend>
+
+          <div class="row">
+            <label for="request_project_leader">Project Leader:</label>
+            <span>required</span>
+            <input name="request[project_leader]" id="request_project_leader" class="text" type="text" required="required" />
+          </div>
+
+          <div class="row">
+            <label>Project Type:</label>
+            <label class="checkbox">
+              <input type="checkbox" name="request_project_types[]" value="web-app" />
+              Web Application
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="request_project_types[]" value="intranet" />
+              Internal Web Application / Intranet
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="request_project_types[]" value="website" />
+              Website
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="request_project_types[]" value="mobile-website" />
+              Mobile Website (specific/alterations)
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="request_project_types[]" value="email" />
+              Email Newsletter
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="request_project_types[]" value="ios" />
+              iPhone/iPad App
+            </label>
+          </div>
+
+          <div class="row">
+            <label>Current Status:</label>
+            <label class="radio">
+              <input type="radio" name="request_project_status" value="replacement-of-old-system" />
+              Existing - This project is to replace our current website/app/newsletter
+            </label>
+            <label class="radio">
+              <input type="radio" name="request_project_status" value="new-system" />
+              New - This project is a new endeavor for us - we have no equivalent
+            </label>
+          </div>
+
+          <div class="row">
+            <label for="request_deadline">Deadline:</label>
+            <span>optional</span>
+            <input name="request[deadline]" id="request_deadline" class="text" type="text" />
+          </div>
+
+          <div class="row">
+            <label for="request_budget">Budget:</label>
+            <span>required</span>
+            <select name="request[budget]" id="request_budget" required="required" data-other-id="request_budget_other">
+              <option value="">- Select one -</option>
+              <option value="500-1000">£500 - £1000</option>
+              <option value="1000-2000">£1000 - £2000</option>
+              <option value="2000-6000">£2000 - £6000</option>
+              <option value="6000-10000">£6000 - £10000</option>
+              <option value="10000-20000">£10000 - £20000</option>
+              <option value="20000+">£20000+</option>
+              <option value="other">Other&hellip;</option>
+            </select>
+            <input name="request[budget_other]" id="request_budget_other" class="text other" type="text" placeholder="Please enter an idea of your budget&hellip;" />
+          </div>
+
+          <div class="row">
+            <label for="request_notes">Description / Notes:</label>
+            <span>optional</span>
+            <textarea name="request[notes]" id="request_notes" class="text" rows="7" cols="50"></textarea>
+          </div>
+
+          <div class="row">
+            <label>Copywriting:</label>
+            <label class="radio">
+              <input type="radio" name="request_copywriting" value="required" required="required" />
+              We're in need of a copywriter.
+            </label>
+            <label class="radio">
+              <input type="radio" name="request_copywriting" value="existing" required="required" />
+              You can use the existing copy of my older site/app.
+            </label>
+            <label class="radio">
+              <input type="radio" name="request_copywriting" value="handled-in-house-prior-to-design" required="required" />
+              We will be writing the copy in-house prior to the start of the design.
+            </label>
+          </div>
+
+          <div class="row">
+            <label for="request_success_criteria">Imagine yourself 1 year from now, complete the sentence:</label>
+            <span>optional</span>
+            <textarea name="request[success_criteria]" id="request_success_criteria" class="text" rows="7" cols="50">I know the project was a success because&hellip;</textarea>
+          </div>
+        </fieldset>
+
+        <div class="finish">
+          <button type="submit">Send &raquo;</button>
+        </div>
+
+        <div class="sending">
+          <p><img src="images/layout/sending.png" width="256" height="256" alt="" /></p>
+          <h2>Please wait while your request is delivered&hellip;</h2>
+        </div>
+      </form>
+    </div><!-- .grid_12 -->
+
+    <div class="clear gap"></div>
+  </div><!-- .container_12 -->
+
+  <div class="clear"></div>
+</div><!-- #content -->
