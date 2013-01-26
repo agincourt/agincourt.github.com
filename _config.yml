@@ -1,4 +1,4 @@
-permalink:    /:categories/:title
+permalink:    pretty
 auto:         true
 safe:         true
 source:       ./jekyll
