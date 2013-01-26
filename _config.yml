@@ -1,5 +1,7 @@
-source:       ./jekyll
-destination:  ./static
 permalink:    /:categories/:title
 auto:         true
-server:       true
+safe:         true
+source:       ./jekyll
+destination:  ./static
+lsi:          false
+pygments:     true
